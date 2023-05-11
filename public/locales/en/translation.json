@@ -5,5 +5,8 @@
   "Открыть": "Open",
   "Свернуть": "Close",
   "Загрузка": "Loading...",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Something went wrong.",
+  "Обновить страницу": "Refresh",
+  "Throw error": "Throw Error"
 }
