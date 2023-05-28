@@ -45,6 +45,7 @@ module.exports = {
             code: 105,
             ignoreComments: true,
         }],
+        'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
     },
     globals: {
         __IS_DEV__: true,
