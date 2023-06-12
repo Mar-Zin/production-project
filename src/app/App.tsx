@@ -4,7 +4,6 @@ import { Navbar } from 'widgets/Navbar';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense } from 'react';
-import './styles/index.scss';
 
 function App() {
     const { theme } = useTheme();
