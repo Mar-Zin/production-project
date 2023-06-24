@@ -10,6 +10,7 @@
   "Обновить страницу": "Refresh",
   "Throw error": "Throw Error",
   "Ru/En": "Ru",
-  "Войти": "Sign In"
-
+  "Войти": "Sign In",
+  "Введите логин": "Enter login",
+  "Введите пароль": "Enter password"
 }
