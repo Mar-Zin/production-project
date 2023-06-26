@@ -12,5 +12,8 @@
   "Ru/En": "Ru",
   "Войти": "Sign In",
   "Введите логин": "Enter login",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Login Form",
+  "Вы ввели неверный логин или пароль": "Uncorrect login or password",
+  "Выйти": "Logout"
 }

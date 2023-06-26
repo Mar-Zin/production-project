@@ -46,7 +46,7 @@ module.exports = {
             ignoreAttribute: ['to', 'data-testid'],
         }],
         'max-len': ['error', {
-            code: 105,
+            code: 115,
             ignoreComments: true,
         }],
         'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
