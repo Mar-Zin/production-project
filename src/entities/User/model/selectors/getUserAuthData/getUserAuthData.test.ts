@@ -8,13 +8,13 @@ describe('getUserAuthData', () => {
             user: {
                 authData: {
                     id: '1',
-                    name: 'admin',
+                    username: 'admin',
                 },
             },
         };
         expect(getUserAuthData(state as StateSchema)).toEqual({
             id: '1',
-            name: 'admin',
+            username: 'admin',
         });
     });
 });
