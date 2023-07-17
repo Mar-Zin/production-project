@@ -1,25 +1,31 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useState } from 'react';
-import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { LangSwitcher } from 'features/LangSwitcher/LangSwitcher';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config/routerConfig/routerConfig';
+import { ThemeSwitcher } from 'features/ThemeSwitcher';
+import { memo, useMemo, useState } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { SidebarItemsList } from 'widgets/Sidebar/model/items';
+import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { Button, ButtonSize, ButtonTheme } from '../../../../shared/ui/Button/Button';
-import MainIcon from '../../../../shared/assets/icons/home.svg';
-import AboutIcon from '../../../../shared/assets/icons/about.svg';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
   className?: string;
 }
-export const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
-    const { t } = useTranslation();
 
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
+
+    const ItemsList = useMemo(() => (
+        SidebarItemsList.map((item) => (
+            <SidebarItem
+                key={item.path}
+                item={item}
+                collapsed={collapsed}
+            />
+        ))
+    ), [collapsed]);
 
     return (
         <div
@@ -29,30 +35,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
             ])}
         >
             <div className={cls.items}>
-                <AppLink
-                    theme={AppLinkTheme.SECONDARY}
-                    to={RoutePath.main}
-                    className={cls.item}
-                >
-                    <MainIcon className={cls.icon} />
-                    <span
-                        className={cls.link}
-                    >
-                        {t('Главная')}
-                    </span>
-                </AppLink>
-                <AppLink
-                    theme={AppLinkTheme.SECONDARY}
-                    to={RoutePath.about}
-                    className={cls.item}
-                >
-                    <AboutIcon className={cls.icon} />
-                    <span
-                        className={cls.link}
-                    >
-                        {t('О нас')}
-                    </span>
-                </AppLink>
+                {ItemsList}
             </div>
             <Button
                 data-testid="sidebar-toggle"
@@ -74,4 +57,4 @@ export const Sidebar = ({ className }: SidebarProps) => {
             </div>
         </div>
     );
-};
+});
