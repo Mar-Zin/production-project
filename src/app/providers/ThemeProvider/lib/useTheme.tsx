@@ -19,9 +19,12 @@ export function useTheme(): UseThemeResult {
         default:
             newTheme = Theme.DARK;
         }
-        setTheme(newTheme);
+        setTheme?.(newTheme);
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     };
 
-    return { theme, toggleTheme };
+    return {
+        theme: theme || Theme.LIGHT,
+        toggleTheme,
+    };
 }
