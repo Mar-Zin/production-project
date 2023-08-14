@@ -1,7 +1,7 @@
 import { LangSwitcher } from 'features/LangSwitcher/LangSwitcher';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { memo, useMemo, useState } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { SidebarItemsList } from 'widgets/Sidebar/model/items';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { Button, ButtonSize, ButtonTheme } from '../../../../shared/ui/Button/Button';
@@ -27,10 +27,14 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         ))
     ), [collapsed]);
 
+    const mods: Mods = {
+        [cls.collapsed]: collapsed,
+    };
+
     return (
         <div
             data-testid="sidebar"
-            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
+            className={classNames(cls.Sidebar, mods, [
                 className,
             ])}
         >
