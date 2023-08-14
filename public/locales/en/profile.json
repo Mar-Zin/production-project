@@ -2,5 +2,13 @@
     "Профиль": "Profile",
     "Редактировать": "Edit",
     "Введите имя": "Enter name",
-    "Введите фамилию": "Enter surname"
+    "Введите фамилию": "Enter surname",
+    "Введите username": "Enter username",
+    "Установите аватар": "Enter avatar",
+    "Произошла ошибка при загрузке профиля": "Profile Error",
+    "Попробуйте обновить страницу": "Try reload page",
+    "Отменить": "Cancel",
+    "Сохранить": "Save",
+    "Введите возраст": "Enter age",
+    "Введите город": "Enter city"
 }
