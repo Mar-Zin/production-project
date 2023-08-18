@@ -10,5 +10,12 @@
     "Отменить": "Cancel",
     "Сохранить": "Save",
     "Введите возраст": "Enter age",
-    "Введите город": "Enter city"
+    "Введите город": "Enter city",
+    "Имя и фамилия обязательны": "Name and surname is required",
+    "Некорректный возраст": "Incorrect age",
+    "Некорректный регион": "Incorrect counrty",
+    "Серверная ошибка при сохранении": "Server Error",
+    "Данные не указаны": "No data",
+    "Город обязателен": "City is required",
+    "username обязателен": "username is required"
 }
