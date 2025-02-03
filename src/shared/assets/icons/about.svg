@@ -17,6 +17,5 @@
 <clipPath id="clip0_16_4">
 <rect width="20" height="20" />
 </clipPath>
-                    className={cls.link}
 </defs>
 </svg>
